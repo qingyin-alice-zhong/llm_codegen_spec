@@ -1,0 +1,283 @@
+KERNEL TEST RESULTS
+==================================================
+
+PASS: 4 kernels
+------------------------------
+abs_int8: Success
+add_offset_int8: Success
+negate_int8: Success
+vectoradd_int16: Success
+
+ERROR: 90 kernels
+------------------------------
+argmax_bfloat16: Traceback (most recent call last):
+  File "/home/jl4257/llm_codegen/npueval_dataset/argmax_bfloat16/test.py", line 86, in <module>
+    _test_argmax_bfloat16(args.kernel_path)
+argmax_int32: Traceback (most recent call last):
+  File "/home/jl4257/llm_codegen/npueval_dataset/argmax_int32/test.py", line 86, in <module>
+    _test_argmax_int32(args.kernel_path)
+argmin_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/argmin_bfloat16/test.py", line 24
+    def reference_argmin_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                         ^^
+avgpool1d_bfloat16: Traceback (most recent call last):
+  File "/home/jl4257/allo/allo/ir/builder.py", line 2704, in build_stmts
+    results.append(build_stmt(ctx, stmt))
+avgpool1d_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/avgpool1d_relu_bfloat16/test.py", line 24
+    def reference_avgpool1d_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (128,)"]):
+                                                                                     ^^
+avgpool2d_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/avgpool2d_bfloat16/test.py", line 24
+    def reference_avgpool2d_bfloat16(x0: Annotated[np.ndarray, "shape: (32,)"] -> Annotated[np.ndarray, "shape: (8,)"]):
+                                                                               ^^
+avgpool2d_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/avgpool2d_relu_bfloat16/test.py", line 24
+    def reference_avgpool2d_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (32,)"] -> Annotated[np.ndarray, "shape: (8,)"]):
+                                                                                    ^^
+bitcount_uint16:   File "/home/jl4257/llm_codegen/npueval_dataset/bitcount_uint16/test.py", line 24
+    def reference_bitcount_uint16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                             ^^
+cast_bfloat16_to_float32:   File "/home/jl4257/llm_codegen/npueval_dataset/cast_bfloat16_to_float32/test.py", line 24
+    def reference_cast_bfloat16_to_float32(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                      ^^
+cast_bfloat16_to_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/cast_bfloat16_to_int8/test.py", line 24
+    def reference_cast_bfloat16_to_int8(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                   ^^
+cast_float32_to_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/cast_float32_to_bfloat16/test.py", line 24
+    def reference_cast_float32_to_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                      ^^
+cast_int8_to_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/cast_int8_to_int32/test.py", line 24
+    def reference_cast_int8_to_int32(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                ^^
+ceil_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/ceil_bfloat16/test.py", line 24
+    def reference_ceil_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+compare_equal_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/compare_equal_bfloat16/test.py", line 24
+    def reference_compare_equal_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                ^^
+compare_equal_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/compare_equal_int32/test.py", line 24
+    def reference_compare_equal_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                             ^^
+compare_gt_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/compare_gt_int8/test.py", line 24
+    def reference_compare_gt_int8(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                         ^^
+compare_lt_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/compare_lt_int8/test.py", line 24
+    def reference_compare_lt_int8(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                         ^^
+complexabs_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/complexabs_bfloat16/test.py", line 24
+    def reference_complexabs_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                             ^^
+conv1d_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_bfloat16/test.py", line 24
+    def reference_conv1d_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (254,)"]):
+                                                                                                                                                                      ^^
+conv1d_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_bias_relu_bfloat16/test.py", line 24
+    def reference_conv1d_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param1: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (254,)"]):
+                                                                                                                                                                                                                                                                           ^^
+conv1d_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_int32/test.py", line 24
+    def reference_conv1d_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (254,)"]):
+                                                                                                                                                                   ^^
+conv1d_k2_s1_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_k2_s1_bias_relu_bfloat16/test.py", line 24
+    def reference_conv1d_k2_s1_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (254,)"]):
+                                                                                                                                                                                      ^^
+conv1d_k2_s2_bias_int16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_k2_s2_bias_int16/test.py", line 24
+    def reference_conv1d_k2_s2_bias_int16(x0: Annotated[np.ndarray, "shape: (128,)"], x1: Annotated[np.ndarray, "shape: (128,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (126,)"]):
+                                                                                                                                                                              ^^
+conv1d_k4_s1_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv1d_k4_s1_bias_relu_bfloat16/test.py", line 24
+    def reference_conv1d_k4_s1_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (254,)"]):
+                                                                                                                                                                                      ^^
+conv2d_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv2d_bfloat16/test.py", line 24
+    def reference_conv2d_bfloat16(x0: Annotated[np.ndarray, "shape: (16,)"], x1: Annotated[np.ndarray, "shape: (16,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (12,)"]):
+                                                                                                                                                                    ^^
+conv2d_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/conv2d_int32/test.py", line 24
+    def reference_conv2d_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (252,)"]):
+                                                                                                                                                                   ^^
+conv2d_k2_s1_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv2d_k2_s1_bias_relu_bfloat16/test.py", line 24
+    def reference_conv2d_k2_s1_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (2,)"], x1: Annotated[np.ndarray, "shape: (2,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (-2,)"]):
+                                                                                                                                                                                  ^^
+conv2d_k4_s2_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/conv2d_k4_s2_bias_relu_bfloat16/test.py", line 24
+    def reference_conv2d_k4_s2_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (1,)"], x1: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param1: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (-3,)"]):
+                                                                                                                                                                                                                                                                             ^^
+cos_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/cos_bfloat16/test.py", line 24
+    def reference_cos_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                          ^^
+cumsum_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/cumsum_bfloat16/test.py", line 24
+    def reference_cumsum_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                             ^^
+cumsum_int16:   File "/home/jl4257/llm_codegen/npueval_dataset/cumsum_int16/test.py", line 24
+    def reference_cumsum_int16(x0: Annotated[np.ndarray, "shape: (500,)"] -> Annotated[np.ndarray, "shape: (500,)"]):
+                                                                          ^^
+divide_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/divide_bfloat16/test.py", line 24
+    def reference_divide_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                         ^^
+dotproduct_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/dotproduct_bfloat16/test.py", line 24
+    def reference_dotproduct_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], x2: Annotated[np.ndarray, "shape: (256,)"], offset: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                                                                       ^^
+dotproduct_bias_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/dotproduct_bias_relu_bfloat16/test.py", line 24
+    def reference_dotproduct_bias_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (16,)"], x1: Annotated[np.ndarray, "shape: (16,)"], param: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param1: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (16,)"]):
+                                                                                                                                                                                                                                                                             ^^
+dotproduct_bias_relu_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/dotproduct_bias_relu_int8/test.py", line 24
+    def reference_dotproduct_bias_relu_int8(x0: Annotated[np.ndarray, "shape: (20,)"], x1: Annotated[np.ndarray, "shape: (20,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (20,)"]):
+                                                                                                                                                                              ^^
+dotproduct_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/dotproduct_int32/test.py", line 24
+    def reference_dotproduct_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], x2: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                      ^^
+elementwise_max_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/elementwise_max_bfloat16/test.py", line 24
+    def reference_elementwise_max_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                  ^^
+elementwise_max_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/elementwise_max_int8/test.py", line 24
+    def reference_elementwise_max_int8(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                              ^^
+elementwise_min_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/elementwise_min_bfloat16/test.py", line 24
+    def reference_elementwise_min_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                  ^^
+elementwise_min_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/elementwise_min_int8/test.py", line 24
+    def reference_elementwise_min_int8(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                              ^^
+euclidean_dist_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/euclidean_dist_bfloat16/test.py", line 24
+    def reference_euclidean_dist_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                 ^^
+exp_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/exp_bfloat16/test.py", line 24
+    def reference_exp_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                          ^^
+floor_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/floor_bfloat16/test.py", line 24
+    def reference_floor_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                            ^^
+gather_bfloat16_int32idx:   File "/home/jl4257/llm_codegen/npueval_dataset/gather_bfloat16_int32idx/test.py", line 24
+    def reference_gather_bfloat16_int32idx(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                  ^^
+gelu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/gelu_bfloat16/test.py", line 24
+    def reference_gelu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+hardsigmoid_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/hardsigmoid_bfloat16/test.py", line 24
+    def reference_hardsigmoid_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                  ^^
+hardsigmoid_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/hardsigmoid_int8/test.py", line 24
+    def reference_hardsigmoid_int8(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                              ^^
+hardswish_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/hardswish_bfloat16/test.py", line 24
+    def reference_hardswish_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                ^^
+hingeloss_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/hingeloss_bfloat16/test.py", line 24
+    def reference_hingeloss_bfloat16(x0: Annotated[np.ndarray, "shape: (2,)"], x1: Annotated[np.ndarray, "shape: (2,)"] -> Annotated[np.ndarray, "shape: (2,)"]):
+                                                                                                                        ^^
+l1_norm_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/l1_norm_bfloat16/test.py", line 24
+    def reference_l1_norm_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                              ^^
+leakyrelu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/leakyrelu_bfloat16/test.py", line 24
+    def reference_leaky_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                 ^^
+log10_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/log10_bfloat16/test.py", line 24
+    def reference_log10_bfloat16(x0: Annotated[np.ndarray, "shape: (0,)"] -> Annotated[np.ndarray, "shape: (0,)"]):
+                                                                          ^^
+log2_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/log2_bfloat16/test.py", line 24
+    def reference_log2_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+log_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/log_bfloat16/test.py", line 24
+    def reference_log_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                          ^^
+matmul_16x16_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/matmul_16x16_int8/test.py", line 24
+    def reference_matmul_16x16_int8(x0: Annotated[np.ndarray, "shape: (16,)"], x1: Annotated[np.ndarray, "shape: (16,)"] -> Annotated[np.ndarray, "shape: (16,)"]):
+                                                                                                                         ^^
+matrixvector_mult_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/matrixvector_mult_int8/test.py", line 24
+    def reference_matrixvector_mult_int8(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], x2: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                            ^^
+max_abs_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/max_abs_bfloat16/test.py", line 24
+    def reference_max_abs_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                              ^^
+maxpool2d_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/maxpool2d_bfloat16/test.py", line 24
+    def reference_maxpool2d_bfloat16(x0: Annotated[np.ndarray, "shape: (32,)"] -> Annotated[np.ndarray, "shape: (8,)"]):
+                                                                               ^^
+maxpool2d_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/maxpool2d_relu_bfloat16/test.py", line 24
+    def reference_maxpool2d_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (32,)"] -> Annotated[np.ndarray, "shape: (8,)"]):
+                                                                                    ^^
+maxpool2d_relu_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/maxpool2d_relu_int8/test.py", line 24
+    def reference_maxpool2d_relu_int8(x0: Annotated[np.ndarray, "shape: (16,)"] -> Annotated[np.ndarray, "shape: (4,)"]):
+                                                                                ^^
+mish_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/mish_bfloat16/test.py", line 24
+    def reference_mish_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+mse_loss_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/mse_loss_bfloat16/test.py", line 24
+    def reference_mse_loss_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                           ^^
+negate_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/negate_bfloat16/test.py", line 24
+    def reference_negate_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                             ^^
+pad1d_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/pad1d_int32/test.py", line 24
+    def reference_pad1d_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param1: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                                                                                                             ^^
+pad2d_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/pad2d_int32/test.py", line 24
+    def reference_pad2d_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"], param: Annotated[np.ndarray, "shape: (1,)"], param1: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                                                                                                             ^^
+reciprocal_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/reciprocal_bfloat16/test.py", line 24
+    def reference_reciprocal_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                 ^^
+reduce_add_relu_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/reduce_add_relu_int8/test.py", line 24
+    def reference_reduce_add_relu_int8(x0: Annotated[np.ndarray, "shape: (40,)"] -> Annotated[np.ndarray, "shape: (1,)"]):
+                                                                                 ^^
+reducemin_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/reducemin_bfloat16/test.py", line 24
+    def reference_reducemin_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                ^^
+relu6_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/relu6_bfloat16/test.py", line 24
+    def reference_relu6_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                            ^^
+relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/relu_bfloat16/test.py", line 24
+    def reference_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+relu_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/relu_int8/test.py", line 24
+    def reference_relu_int8(x0: Annotated[np.ndarray, "shape: (1024,)"] -> Annotated[np.ndarray, "shape: (1024,)"]):
+                                                                        ^^
+round_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/round_bfloat16/test.py", line 24
+    def reference_round_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                            ^^
+rsqrt_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/rsqrt_bfloat16/test.py", line 24
+    def reference_rsqrt_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                            ^^
+shuffle_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/shuffle_int32/test.py", line 24
+    def reference_shuffle_int32(x0: Annotated[np.ndarray, "shape: (256,)"], param: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                        ^^
+sigmoid_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/sigmoid_bfloat16/test.py", line 24
+    def reference_sigmoid_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                              ^^
+sign_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/sign_int8/test.py", line 24
+    def reference_sign_int8(x0: Annotated[np.ndarray, "shape: (130,)"] -> Annotated[np.ndarray, "shape: (130,)"]):
+                                                                       ^^
+silu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/silu_bfloat16/test.py", line 24
+    def reference_silu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+sin_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/sin_bfloat16/test.py", line 24
+    def reference_sin_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                          ^^
+softmax_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/softmax_bfloat16/test.py", line 24
+    def reference_softmax_bfloat16(x0: Annotated[np.ndarray, "shape: (64,)"] -> Annotated[np.ndarray, "shape: (64,)"]):
+                                                                             ^^
+softplus_bfloat16: Traceback (most recent call last):
+  File "/home/jl4257/allo/allo/ir/builder.py", line 2704, in build_stmts
+    results.append(build_stmt(ctx, stmt))
+sqrt_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/sqrt_bfloat16/test.py", line 24
+    def reference_sqrt_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+tan_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/tan_bfloat16/test.py", line 24
+    def reference_tan_bfloat16(x0: Annotated[np.ndarray, "shape: (3,)"] -> Annotated[np.ndarray, "shape: (3,)"]):
+                                                                        ^^
+tanh_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/tanh_bfloat16/test.py", line 24
+    def reference_tanh_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                           ^^
+variance_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/variance_bfloat16/test.py", line 24
+    def reference_variance_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                               ^^
+vectoradd_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/vectoradd_bfloat16/test.py", line 24
+    def reference_vectoradd_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                            ^^
+vectoradd_relu_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/vectoradd_relu_bfloat16/test.py", line 24
+    def reference_vectoradd_relu_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                 ^^
+vectormatrix_mult_int32:   File "/home/jl4257/llm_codegen/npueval_dataset/vectormatrix_mult_int32/test.py", line 24
+    def reference_vectormatrix_mult_int32(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], x2: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                             ^^
+vectormult_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/vectormult_bfloat16/test.py", line 24
+    def reference_vectormult_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"], offset: Annotated[np.ndarray, "shape: (1,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                                                           ^^
+vectorsubtract_bfloat16:   File "/home/jl4257/llm_codegen/npueval_dataset/vectorsubtract_bfloat16/test.py", line 24
+    def reference_vectorsubtract_bfloat16(x0: Annotated[np.ndarray, "shape: (256,)"], x1: Annotated[np.ndarray, "shape: (256,)"] -> Annotated[np.ndarray, "shape: (256,)"]):
+                                                                                                                                 ^^
+vectorsubtract_int8:   File "/home/jl4257/llm_codegen/npueval_dataset/vectorsubtract_int8/test.py", line 24
+    def reference_vectorsubtract_int8(x0: Annotated[np.ndarray, "shape: (512,)"], x1: Annotated[np.ndarray, "shape: (512,)"] -> Annotated[np.ndarray, "shape: (512,)"]):
+                                                                                                                             ^^
+

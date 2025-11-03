@@ -1,0 +1,26 @@
+# python
+__pycache__/
+
+# output
+llm_output/
+
+# # polybench code
+# polybench/
+
+# aie kernels
+aie_kernel/
+
+# test
+test/
+# temp plot script
+plot_script/
+
+top.prj/
+
+# unrelated directories
+update_plot/
+allo_trace_test/
+scripts_backup/
+
+# vscode
+.vscode/

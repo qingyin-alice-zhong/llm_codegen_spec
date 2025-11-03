@@ -1,0 +1,1 @@
+Kernel functions to be implemented by the LLM. It only contains the function signature. 

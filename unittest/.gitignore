@@ -1,0 +1,5 @@
+top.prj/
+trace_test_shuffle/
+trace_test_conv_8x8_3x3/
+trace_test_conv_3x3_3x3/
+kernels/conv_small/
