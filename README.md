@@ -1,8 +1,8 @@
 # llm_codegen_spec
 An enhanced version of llm_codegen with spec-kit integration for better kernel code generation on NPU architectures.
 
-# Comments to use:
-
+# Example comments to start 3 iterations:
+```bash
 cd ~/mlir-aie/allo
 conda activate allo
 cd ..
@@ -27,3 +27,4 @@ export LLVM_BUILD_DIR=/opt/llvm-project-19.x/build
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 python main.py --provider google --model gemini-2.5-flash --backend npu_new --max_iterations 3 --kernel dotproduct_bias_relu_int8
+```
