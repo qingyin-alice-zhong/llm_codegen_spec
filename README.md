@@ -1,7 +1,8 @@
 # llm_codegen_spec
-An enhanced version of llm_codegen with spec-kit integration for better kernel code generation on NPU architectures.
+An enhanced version of llm_codegen with spec-kit integration for better kernel code generation on NPU architectures. 
+(version for one kernel)
 
-# Example comments to start 3 iterations:
+# Example comments to start 5 iterations:
 ```bash
 cd ~/mlir-aie/allo
 conda activate allo
@@ -26,5 +27,11 @@ export LLVM_BUILD_DIR=/opt/llvm-project-19.x/build
 # setup LDPRELOAD to allow mlir-aie gemm able to be compiled
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
-python main.py --provider google --model gemini-2.5-flash --backend npu_new --max_iterations 3 --kernel dotproduct_bias_relu_int8
+python main.py --provider google --model gemini-2.5-flash --backend npu_new --max_iterations 5 --kernel dotproduct_bias_relu_int8
 ```
+
+# Best output:
+ Speedup: 10.38x
+<img width="1074" height="623" alt="7970a9009272b24205c962b98d95d72a" src="https://github.com/user-attachments/assets/76745df9-77bc-41df-9179-4dd9dd933103" />
+
+
