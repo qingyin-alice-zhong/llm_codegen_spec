@@ -32,6 +32,3 @@ python main.py --provider google --model gemini-2.5-flash --backend npu_new --ma
 
 # Best output:
  Speedup: 10.38x
-<img width="1074" height="623" alt="7970a9009272b24205c962b98d95d72a" src="https://github.com/user-attachments/assets/76745df9-77bc-41df-9179-4dd9dd933103" />
-
-
