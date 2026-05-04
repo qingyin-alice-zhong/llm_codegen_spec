@@ -30,5 +30,3 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 python main.py --provider google --model gemini-2.5-flash --backend npu_new --max_iterations 5 --kernel dotproduct_bias_relu_int8
 ```
 
-# Best output:
- Speedup: 10.38x
