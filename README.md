@@ -1,6 +1,5 @@
 # llm_codegen_spec
 An enhanced version of llm_codegen with spec-kit integration for better kernel code generation on NPU architectures. 
-(version for one kernel)
 
 # Example comments to start 5 iterations:
 ```bash
